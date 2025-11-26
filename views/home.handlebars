@@ -1,0 +1,37 @@
+<div class='container mx-auto px-4 py-8 max-w-3xl'>
+
+  <h1
+    class='text-4xl font-extrabold text-gray-900 mb-8 border-b-4 border-indigo-500 pb-3'
+  >
+    Olá
+    <span class='text-indigo-600'>{{user}}</span>
+    👋
+  </h1>
+
+  <div class='space-y-4'>
+    <!-- Lista dos Produtos-->
+    {{#each products}}
+      <!-- Link do produto -->
+      <a
+        href='/produto/{{id}}'
+        class='flex items-center space-x-4 bg-white p-5 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl hover:border-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1'
+      >
+
+        <!--Imagem principal do produto-->
+        <img
+          src='/img/{{this.id}}-1.webp'
+          alt='Imagem de {{this.name}}'
+          class='w-12 h-12 object-cover rounded-md flex-shrink-0'
+        />
+
+        <!-- Nome do produto-->
+        <span
+          class='text-xl font-semibold text-gray-800 hover:text-indigo-600 truncate'
+        >
+          {{this.name}}
+        </span>
+      </a>
+    {{/each}}
+  </div>
+
+</div>

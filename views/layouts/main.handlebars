@@ -1,0 +1,54 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{{titlePage}}</title>
+    <script src='https://cdn.tailwindcss.com'></script>
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      sizes='any'
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>"
+    />
+  </head>
+
+  <body
+    class='bg-gray-100 text-gray-800 antialiased min-h-screen flex flex-col'
+  >
+
+    <nav class='bg-white shadow-md p-4 sticky top-0 z-10'>
+      <div
+        class='container mx-auto flex justify-between items-center max-w-7xl'
+      >
+
+        <a
+          href='/'
+          class='text-2xl font-bold text-indigo-600 hover:text-indigo-800 transition duration-300'
+        >
+          Home 🛍️
+        </a>
+
+        <div class='text-lg font-medium text-gray-700'>
+          Olá
+          {{user}}
+          👋
+        </div>
+      </div>
+    </nav>
+
+    <main class='flex-grow'>
+      <div class='container mx-auto max-w-7xl p-4'>
+        {{{body}}}
+      </div>
+    </main>
+
+    <footer class='bg-gray-800 text-white p-4 mt-8'>
+      <div class='container mx-auto text-center text-sm max-w-7xl'>
+        <p>&copy; {{currentYear}} Meu Exercício Express. Feito por oDevFred.</p>
+        <p class='text-gray-400 mt-1'>Desenvolvido com Express, Handlebars e
+          Tailwind CSS.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

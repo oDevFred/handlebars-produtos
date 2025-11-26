@@ -1,0 +1,64 @@
+<div
+  class='container mx-auto px-4 py-8 max-w-4xl bg-white shadow-xl rounded-lg'
+>
+  <!-- Nome do produto -->
+  <h1 class='text-3xl font-bold text-gray-800 mb-3'>{{product.name}}</h1>
+
+  <div class='grid grid-cols-3 gap-4 mb-8'>
+    <!-- Imagens do Produto -->
+    <div class='overflow-hidden rounded-lg shadow-md border border-gray-200'>
+      <img
+        src='/img/{{product.id}}-1.webp'
+        alt='Imagem 1 do Produto'
+        class='w-full h-40 object-cover transition duration-300 hover:scale-105'
+      />
+    </div>
+
+    <div class='overflow-hidden rounded-lg shadow-md border border-gray-200'>
+      <img
+        src='/img/{{product.id}}-2.webp'
+        alt='Imagem 2 do Produto'
+        class='w-full h-40 object-cover transition duration-300 hover:scale-105'
+      />
+    </div>
+
+    <div class='overflow-hidden rounded-lg shadow-md border border-gray-200'>
+      <img
+        src='/img/{{product.id}}-3.webp'
+        alt='Imagem 3 do Produto'
+        class='w-full h-40 object-cover transition duration-300 hover:scale-105'
+      />
+    </div>
+
+  </div>
+
+  <!-- Informações do produto -->
+  <div class='space-y-4'>
+
+    <div class='bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500'>
+      <p class='text-sm text-gray-500'>ID:</p>
+      <p
+        class='text-lg font-mono text-gray-700 font-semibold'
+      >{{product.id}}</p>
+    </div>
+
+    <div class='bg-gray-50 p-4 rounded-lg border-l-4 border-green-500'>
+      <p class='text-sm text-gray-500'>Preço:</p>
+      <p class='text-2xl font-bold text-green-600'>R$ {{product.price}}</p>
+    </div>
+
+    <div class='bg-gray-50 p-4 rounded-lg border-l-4 border-yellow-500'>
+      <p class='text-sm text-gray-500'>Descrição:</p>
+      <p class='text-base text-gray-700 mt-1'>{{product.description}}</p>
+    </div>
+
+  </div>
+
+  <!-- Link pra voltar pra home -->
+  <a
+    href='/'
+    class='mt-8 inline-block px-6 py-3 bg-indigo-600 text-white font-medium text-lg rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105'
+  >
+    ← Voltar para a Home
+  </a>
+</div>
